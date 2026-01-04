@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Hero Section</title>
+
+  <!-- Internal CSS -->
+   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* =========================
+   RESET & BASE STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+/* =========================
+   HERO SECTION
+========================= */
+.hero-section {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+/* =========================
+   HERO CONTAINER
+========================= */
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 3.5rem;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* BADGE */
+.hero-badge {
+  width: fit-content;
+  background: rgba(49, 130, 206, 0.12);
+  color: #3182ce;
+  padding: 0.45rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+}
+
+/* HEADING */
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.15;
+  color: #1a202c;
+}
+
+/* PARAGRAPH */
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+/* FEATURES LIST */
+.hero-features {
+  list-style: none;
+  margin-bottom: 2.4rem;
+}
+
+.hero-features li {
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 0.7rem;
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.hero-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3182ce;
+  font-weight: 700;
+}
+
+/* ACTION BUTTONS */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 2.8rem;
+}
+
+.hero-btn {
+  padding: 0.9rem 2.4rem;
+  background: linear-gradient(135deg, #3182ce, #2563eb);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(49, 130, 206, 0.35);
+}
+
+.hero-link {
+  color: #3182ce;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-link:hover {
+  text-decoration: underline;
+}
+
+/* STATS */
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.8rem;
+}
+
+.hero-stats div {
+  text-align: left;
+}
+
+.hero-stats h3 {
+  color: #3182ce;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.hero-stats p {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero-image {
+  width: 100%;
+  height: 420px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-container {
+    gap: 2.5rem;
+    padding: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-image {
+    height: 360px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  .hero-features {
+    text-align: left;
+    max-width: 340px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .hero-stats div {
+    text-align: center;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .hero-container {
+    padding: 2rem 1.6rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+.services-section {
+  padding: 1rem 1rem;
+  background-color: #ffffff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SECTION HEADER */
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(49, 130, 206, 0.12);
+  color: #3182ce;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* SERVICE CARD */
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 30px rgba(49, 130, 206, 0.08);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(49, 130, 206, 0.18);
+}
+
+/* ICON */
+.service-icon {
+  width: 55px;
+  height: 55px;
+  background: rgba(49, 130, 206, 0.12);
+  color: #3182ce;
+  font-size: 1.6rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* TEXT */
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #1a202c;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-section {
+  padding: 6rem 1rem;
+  background: linear-gradient(180deg, #ffffff, rgba(49, 130, 206, 0.04));
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* IMAGE */
+.about-image {
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.about-content h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1.8rem;
+}
+
+.about-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.about-features li {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  padding-left: 1.4rem;
+  position: relative;
+  color: #2d3748;
+}
+
+.about-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #3182ce;
+  font-weight: 700;
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+.cta-section {
+  padding: 5rem 1rem;
+  background-color: #3182ce;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.cta-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: #ffffff;
+  color: #3182ce;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-content {
+    align-items: center;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .about-content h2 {
+    font-size: 2.1rem;
+  }
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* =========================
+   BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+.projects-section {
+  padding: 5rem 1rem;
+  background: linear-gradient(180deg, rgba(49, 130, 206, 0.04), #ffffff);
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SECTION HEADER (REUSED STYLE) */
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(49, 130, 206, 0.12);
+  color: #3182ce;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* =========================
+   GRID
+========================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* =========================
+   PROJECT CARD
+========================= */
+.project-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 30px rgba(49, 130, 206, 0.08);
+  transition: all 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 50px rgba(49, 130, 206, 0.2);
+}
+
+/* IMAGE */
+.project-image {
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+/* CONTENT */
+.project-content {
+  padding: 2rem;
+}
+
+.project-tag {
+  display: inline-block;
+  background: rgba(49, 130, 206, 0.12);
+  color: #3182ce;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.project-content h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.project-link {
+  color: #3182ce;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* SECTION HEADER */
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(49, 130, 206, 0.12);
+  color: #3182ce;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+/* =======================
+   TESTIMONIALS
+======================= */
+.testimonials-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, rgba(49,130,206,0.04), #ffffff);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 30px rgba(49,130,206,0.1);
+  transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1.8rem;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.client-info span {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+/* =======================
+   TEAM
+======================= */
+.team-section {
+  padding: 5rem 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.team-card {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 30px rgba(49,130,206,0.08);
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.team-card span {
+  font-size: 0.95rem;
+  color: #3182ce;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .testimonials-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+  padding: 5rem 1rem;
+  background: linear-gradient(180deg, rgba(49,130,206,0.04), #ffffff);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* LEFT */
+.contact-info h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  list-style: none;
+}
+
+.contact-details li {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+/* FORM */
+.contact-form {
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 22px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 40px rgba(49,130,206,0.12);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3182ce;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 12px 25px rgba(49,130,206,0.35);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-form {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+/* SECTION */
+.pricing-section {
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, rgba(49,130,206,0.04), #ffffff);
+}
+
+.pricing-container {
+  max-width: 1000px;
+  height: 200px;
+  margin: auto;
+}
+
+/* HEADER (REUSE STYLE) */
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(49,130,206,0.12);
+  color: #3182ce;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+/* GRID */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* CARD */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 40px rgba(49,130,206,0.1);
+  transition: 0.35s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 60px rgba(49,130,206,0.2);
+}
+
+.pricing-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #3182ce;
+}
+
+.duration {
+  display: block;
+  margin-bottom: 2rem;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+/* FEATURES */
+.pricing-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.pricing-features li {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #2d3748;
+}
+
+/* BUTTON */
+.pricing-btn {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background: #3182ce;
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.pricing-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 12px 25px rgba(49,130,206,0.35);
+  transform: translateY(-3px);
+}
+
+/* POPULAR PLAN */
+.pricing-card.popular {
+  border: 2px solid #3182ce;
+  transform: scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3182ce;
+  color: #ffffff;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+/* ======================
+   BLOG HERO
+====================== */
+.blog-hero {
+  padding: 6rem 1rem;
+  background: linear-gradient(180deg, rgba(49,130,206,0.08), #ffffff);
+  text-align: center;
+}
+
+.blog-hero-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.blog-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.blog-hero p {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+/* ======================
+   BLOG SECTION
+====================== */
+.blog-section {
+  padding: 5rem 1rem;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* CARD */
+.blog-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 30px rgba(49,130,206,0.08);
+  transition: 0.35s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 50px rgba(49,130,206,0.18);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 2rem;
+}
+
+.blog-tag {
+  display: inline-block;
+  background: rgba(49,130,206,0.12);
+  color: #3182ce;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.blog-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.blog-link {
+  color: #3182ce;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ======================
+   CTA
+====================== */
+.blog-cta {
+  margin-top: 600px;
+  padding: 5rem 1rem;
+  background: #3182ce;
+  color: #ffffff;
+  text-align: center;
+}
+
+.blog-cta-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.newsletter-form {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.newsletter-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+  border: none;
+  width: 260px;
+}
+
+.newsletter-form button {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  border: none;
+  background: #ffffff;
+  color: #3182ce;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+
+   </style>
+</head>
+<body>
+
+  <section class="hero-section">
+  <div class="hero-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+
+      <span class="hero-badge">🚀 Trusted Digital Partner</span>
+
+      <h1>Modern Digital Solutions</h1>
+
+      <p>
+        We help businesses grow with secure, scalable, and innovative digital
+        solutions designed for the future.
+      </p>
+
+      <!-- FEATURES -->
+      <ul class="hero-features">
+        <li>✔ Custom Software Development</li>
+        <li>✔ Cloud & Enterprise Solutions</li>
+        <li>✔ UI/UX & Product Design</li>
+      </ul>
+
+      <div class="hero-actions">
+        <a href="#contact" class="hero-btn">Get Started</a>
+        <a href="#services" class="hero-link">View Services →</a>
+      </div>
+
+      <!-- STATS -->
+      <div class="hero-stats">
+        <div>
+          <h3>120+</h3>
+          <p>Projects</p>
+        </div>
+        <div>
+          <h3>50+</h3>
+          <p>Clients</p>
+        </div>
+        <div>
+          <h3>8+</h3>
+          <p>Years Experience</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <img src="assets/company.jpeg" alt="Company Image" />
+    </div>
+
+  </div>
+</section>
+
+
+<section class="services-section">
+  <div class="services-container">
+
+    <div class="section-header">
+      <span class="section-badge">What We Do</span>
+      <h2>Our Core Services</h2>
+      <p>
+        We deliver end-to-end digital solutions that help businesses
+        scale efficiently and securely.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Software Development</h3>
+        <p>
+          Custom web and mobile applications built with scalable and
+          secure technologies.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">☁️</div>
+        <h3>Cloud Solutions</h3>
+        <p>
+          Cloud-native infrastructure, migration, and DevOps
+          solutions for enterprises.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>
+          Human-centered design focused on usability, accessibility,
+          and conversion.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔒</div>
+        <h3>Cyber Security</h3>
+        <p>
+          Protect your systems with enterprise-grade security audits
+          and monitoring.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="about-section">
+  <div class="about-container">
+
+    <div class="about-grid">
+
+      <!-- LEFT IMAGE -->
+      <div class="about-image">
+        <img src="assets/service3.jpeg" alt="About Company">
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="about-content">
+        <span class="section-badge">Who We Are</span>
+        <h2>We Build Digital Products That Scale</h2>
+        <p>
+          Our team specializes in building high-performance digital
+          solutions for startups, enterprises, and growing businesses.
+          We combine strategy, design, and engineering to deliver
+          measurable results.
+        </p>
+
+        <ul class="about-features">
+          <li>✔ Experienced & Certified Team</li>
+          <li>✔ Agile & Transparent Process</li>
+          <li>✔ Long-Term Technical Support</li>
+        </ul>
+
+        <a href="#contact" class="hero-btn">Let’s Work Together</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Ready to Start Your Project?</h2>
+    <p>
+      Let’s discuss your idea and turn it into a secure,
+      scalable digital solution.
+    </p>
+    <a href="#contact" class="cta-btn">Contact Us</a>
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="Css/projects.css" />
+</head>
+<body>
+
+<section class="projects-section">
+  <div class="projects-container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-badge">Our Work</span>
+      <h2>Featured Projects</h2>
+      <p>
+        Explore some of our successfully delivered digital solutions
+        across different industries.
+      </p>
+    </div>
+
+    <!-- PROJECTS GRID -->
+    <div class="projects-grid">
+
+      <!-- PROJECT CARD -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/project1.jpeg" alt="Project One">
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Web App</span>
+          <h3>Enterprise Management System</h3>
+          <p>
+            A scalable enterprise web platform built using modern
+            cloud-native architecture.
+          </p>
+          <a href="#" class="project-link">View Case Study →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/project2.jpeg" alt="Project Two">
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Mobile App</span>
+          <h3>Fintech Mobile Application</h3>
+          <p>
+            Secure financial app with real-time analytics and seamless
+            user experience.
+          </p>
+          <a href="#" class="project-link">View Case Study →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/project3.jpeg" alt="Project Three">
+        </div>
+        <div class="project-content">
+          <span class="project-tag">UI/UX</span>
+          <h3>Startup Product Design</h3>
+          <p>
+            Clean and conversion-focused product design for a
+            fast-growing startup.
+          </p>
+          <a href="#" class="project-link">View Case Study →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team & Testimonials</title>
+
+  <link rel="stylesheet" href="Css/team-testimonials.css" />
+</head>
+<body>
+
+<!-- =======================
+   TESTIMONIALS SECTION
+======================= -->
+<section class="testimonials-section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-badge">Testimonials</span>
+      <h2>What Our Clients Say</h2>
+      <p>Trusted by startups and enterprises worldwide</p>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <p>
+          “Their team delivered our platform on time with outstanding
+          quality. Highly professional and reliable.”
+        </p>
+        <div class="client-info">
+          <div>
+            <h4>Sarah Johnson</h4>
+            <span>CEO, Fintech Startup</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “Excellent communication, great design sense, and solid
+          development skills. Highly recommended.”
+        </p>
+        <div class="client-info">
+          <div>
+            <h4>Michael Lee</h4>
+            <span>Product Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “They helped us scale securely and efficiently. A true digital
+          partner.”
+        </p>
+        <div class="client-info">
+          <div>
+            <h4>Emily Carter</h4>
+            <span>CTO, SaaS Company</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =======================
+   TEAM SECTION
+======================= -->
+<!-- <section class="team-section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-badge">Our Team</span>
+      <h2>Meet the Experts</h2>
+      <p>Passionate professionals driving digital innovation</p>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <img src="assets/team1.jpg" alt="Team Member">
+        <h3>John Smith</h3>
+        <span>Lead Developer</span>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/team2.jpg" alt="Team Member">
+        <h3>Anna Brown</h3>
+        <span>UI/UX Designer</span>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/team3.jpg" alt="Team Member">
+        <h3>David Wilson</h3>
+        <span>Cloud Architect</span>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/team4.jpg" alt="Team Member">
+        <h3>Sophia Miller</h3>
+        <span>Project Manager</span>
+      </div>
+
+    </div>
+
+  </div>
+</section> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+
+  <link rel="stylesheet" href="Css/contact.css" />
+</head>
+<body>
+
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="contact-info">
+      <span class="section-badge">Contact Us</span>
+      <h2>Let’s Build Something Great</h2>
+      <p>
+        Have a project in mind or need help with digital solutions?
+        Fill out the form and our team will get back to you shortly.
+      </p>
+
+      <ul class="contact-details">
+        <li>📍 2709 N Hayden Island
+Portland, OR 97217, USA</li>
+        <li>📧 contact@oktacon.com</li>
+        <li>📞 +1 878-284-2269</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required />
+        </div>
+
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required />
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="Subject" />
+        </div>
+
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Plans</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Css/pricing.css" />
+</head>
+<body>
+
+<section class="pricing-section">
+  <div class="pricing-container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-badge">Pricing</span>
+      <h2>Flexible Pricing Plans</h2>
+      <p>
+        Choose a plan that fits your business needs.
+        Transparent pricing with no hidden costs.
+      </p>
+    </div>
+
+    <!-- PRICING GRID -->
+    <div class="pricing-grid">
+
+      <!-- BASIC -->
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <p class="price">$499</p>
+        <span class="duration">per project</span>
+
+        <ul class="pricing-features">
+          <li>✔ Landing Page / Website</li>
+          <li>✔ Responsive Design</li>
+          <li>✔ Basic SEO Setup</li>
+          <li>✔ 7 Days Support</li>
+        </ul>
+
+        <a href="#contact" class="pricing-btn">Get Started</a>
+      </div>
+
+      <!-- POPULAR -->
+      <div class="pricing-card popular">
+        <span class="popular-badge">Most Popular</span>
+        <h3>Professional</h3>
+        <p class="price">$1,499</p>
+        <span class="duration">per project</span>
+
+        <ul class="pricing-features">
+          <li>✔ Custom Web Application</li>
+          <li>✔ UI/UX Design</li>
+          <li>✔ API Integration</li>
+          <li>✔ Security Optimization</li>
+          <li>✔ 30 Days Support</li>
+        </ul>
+
+        <a href="#contact" class="pricing-btn">Start Project</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <p class="price">Custom</p>
+        <span class="duration">tailored solution</span>
+
+        <ul class="pricing-features">
+          <li>✔ Large Scale Systems</li>
+          <li>✔ Cloud & DevOps</li>
+          <li>✔ Advanced Security</li>
+          <li>✔ Dedicated Team</li>
+          <li>✔ Long-Term Support</li>
+        </ul>
+
+        <a href="#contact" class="pricing-btn">Contact Us</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- ======================
+   NEWSLETTER CTA
+====================== -->
+<section class="blog-cta">
+  <div class="blog-cta-container">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to receive insights and updates directly to your inbox.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your Email Address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>
+
+
+</body>
+</html>
