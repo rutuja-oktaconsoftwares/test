@@ -1,0 +1,16 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "image": "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg"
+    },
+    {
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "image": "https://m.media-amazon.com/images/I/81bsw6fnUiL.jpg",
+      "id": 2
+    }
+  ]
+}
